@@ -1,3 +1,13 @@
+// const API_URL = getHostUrl();
+
 $(document).ready(function(){
-  console.log("hey what up");
-})
+
+ let queryString = parseQuery(window.location.search);
+
+console.log(queryString);
+
+});
+
+function parseQuery(query) {
+return query.split('=')[1];
+};
