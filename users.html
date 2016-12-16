@@ -13,14 +13,27 @@
     <a href="index.html"><button type="button" class="btn btn-success">home</button></a>
     <main>
       <section class="users">
-        
+
       </section>
       <section class="sweaters">
-
+        <h3>SWEATERS</h3>
       </section>
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="./script.js"></script>
+    <script id="user-template" type="text/x-handlebars-template">
+      <h1> {{email}} </h1>
+    </script>
+    <script id="sweater-template" type="text/x-handlebars-template">
+      <div class="row">
+        {{#each sweaters}}
+            <div class="col-sm-6 col-md-4">
+
+                <h3>A {{this.color}} {{this.material}} {{this.style}}</h3>
+            </div>
+        {{/each}}
+      </div>
+    </script>
   </body>
 </html>
